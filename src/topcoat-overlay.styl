@@ -1,0 +1,42 @@
+@import overlay-mixin
+
+/*
+
+
+Use this class to create a dialog element. Make sure to apply ".topcoat-overlay-bg" an empty div on the page as well,
+so that the dialog is resting on a dark, transparent background
+
+	<div class="topcoat-overlay-bg"></div>
+	<aside class="topcoat-overlay">
+		<h1>Are eagles nice ?</h1>
+		<div class="topcoat-overlay-buttons">
+			<button role="button" class="topcoat-button--cta">Yes!</button>
+			<button role="button" class="topcoat-button">No</button>
+		</div>
+	</aside>
+
+*/
+
+.topcoat-overlay
+	overlay-base()
+	background-color var-bg-color
+	border var-border
+	font var-font
+	h1
+		font-size 1.1875rem
+		color #484b4c
+		padding-bottom 20px
+		border-bottom 1px solid #d3d7d7
+
+.topcoat-overlay-bg
+	position absolute
+	z-index 5
+	background-color rgba(88, 90, 92, 0.7)
+	width 100%
+	height 100%
+	box-shadow inset 0px 0px 115px 0px #000000
+
+.topcoat-overlay-buttons
+	margin-top 20px
+	.topcoat-button, .topcoat-button--cta
+		margin 5px
