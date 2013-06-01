@@ -23,8 +23,8 @@ so that the dialog is resting on a dark, transparent background
 	<aside class="topcoat-overlay">
 		<h1>Are eagles nice ?</h1>
 		<div class="topcoat-overlay-buttons">
-			<button role="button" class="topcoat-button--cta">Yes!</button>
 			<button role="button" class="topcoat-button">No</button>
+			<button role="button" class="topcoat-button--cta">Yes</button>
 		</div>
 	</aside>
 
@@ -35,17 +35,14 @@ so that the dialog is resting on a dark, transparent background
   overflow: hidden;
   position: absolute;
   z-index: 10;
+  margin: 20%;
   padding: 20px 10px;
   border-radius: 6px;
-  margin: 25% 20%;
-  text-align: center;
   background-color: #e5e9e8;
   border: 1px solid #a5a8a8;
-  font: 0.875em "Source Sans", helvetica, arial, sans-serif;
+  text-align: center;
 }
 .topcoat-overlay h1 {
-  font-size: 1.1875rem;
-  color: #484b4c;
   padding-bottom: 20px;
   border-bottom: 1px solid #d3d7d7;
 }
