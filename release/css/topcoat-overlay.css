@@ -18,17 +18,14 @@ limitations under the License.
 Overlay
 ----------
 
-Use this class to create a dialog element. Make sure to apply ".topcoat-overlay-bg" an empty div on the page as well,
-so that the dialog is resting on a dark, transparent background
-
-	<div class="topcoat-overlay-bg"></div>
-	<aside class="topcoat-overlay">
-		<h1>Are eagles nice ?</h1>
-		<div class="topcoat-overlay-buttons">
-			<button role="button" class="topcoat-button">No</button>
-			<button role="button" class="topcoat-button--cta">Yes</button>
-		</div>
-	</aside>
+    <div class="topcoat-overlay-bg"></div>
+    <aside class="topcoat-overlay">
+        <h1>Are eagles nice ?</h1>
+        <div class="topcoat-overlay-buttons">
+            <button role="button" class="topcoat-button">No</button>
+            <button role="button" class="topcoat-button--cta">Yes</button>
+        </div>
+    </aside>
 
 */
 .topcoat-overlay {

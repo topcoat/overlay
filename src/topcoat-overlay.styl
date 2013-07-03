@@ -5,37 +5,34 @@
 Overlay
 ----------
 
-Use this class to create a dialog element. Make sure to apply ".topcoat-overlay-bg" an empty div on the page as well,
-so that the dialog is resting on a dark, transparent background
-
-	<div class="topcoat-overlay-bg"></div>
-	<aside class="topcoat-overlay">
-		<h1>Are eagles nice ?</h1>
-		<div class="topcoat-overlay-buttons">
-			<button role="button" class="topcoat-button">No</button>
-			<button role="button" class="topcoat-button--cta">Yes</button>
-		</div>
-	</aside>
+    <div class="topcoat-overlay-bg"></div>
+    <aside class="topcoat-overlay">
+        <h1>Are eagles nice ?</h1>
+        <div class="topcoat-overlay-buttons">
+            <button role="button" class="topcoat-button">No</button>
+            <button role="button" class="topcoat-button--cta">Yes</button>
+        </div>
+    </aside>
 
 */
 
 .topcoat-overlay
-	overlay-base()
-	padding: var-overlay-padding
-	border-radius: var-border-radius
-	background-color var-bg-color
-	border var-border
-	text-align center
+    overlay-base()
+    padding: var-overlay-padding
+    border-radius: var-border-radius
+    background-color var-bg-color
+    border var-border
+    text-align center
 
 .topcoat-overlay
-	h1
-		padding-bottom 20px
-		border-bottom 1px solid #d3d7d7
+    h1
+        padding-bottom 20px
+        border-bottom 1px solid #d3d7d7
 
 .topcoat-overlay-bg
-	topcoat-overlay-bg()
+    topcoat-overlay-bg()
 
 .topcoat-overlay-buttons
-	margin-top 20px
-	.topcoat-button, .topcoat-button--cta
-		margin 5px
+    margin-top 20px
+    .topcoat-button, .topcoat-button--cta
+        margin 5px
