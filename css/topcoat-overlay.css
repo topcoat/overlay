@@ -12,7 +12,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-
+body {
+  margin: 0;
+  padding: 0;
+  background: #dfe2e2;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Regular.otf");
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("../font/SourceSansPro-Semibold.otf");
+  font-weight: 600;
+}
 /*
 
 Overlay
@@ -29,17 +51,28 @@ Overlay
 
 */
 .topcoat-overlay {
-  width: 50%;
-  height: auto;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: default;
+  user-select: none;
+  box-sizing: border-box;
+  background-clip: padding-box;
   overflow: hidden;
   position: absolute;
-  z-index: 10;
-  margin: 20%;
+  left: 50%;
+  top: 5%;
   padding: 20px 10px;
   border-radius: 6px;
   background-color: #e5e9e8;
   border: 1px solid #a5a8a8;
+  width: 500px;
+  margin-left: -250px;
   text-align: center;
+  z-index: 10;
 }
 .topcoat-overlay h1 {
   padding-bottom: 20px;
@@ -47,11 +80,11 @@ Overlay
 }
 .topcoat-overlay-bg {
   position: absolute;
-  z-index: 5;
-  background-color: rgba(88,90,92,0.7);
   width: 100%;
   height: 100%;
+  background-color: rgba(88,90,92,0.7);
   box-shadow: inset 0px 0px 115px 0px #000;
+  z-index: 5;
 }
 .topcoat-overlay-buttons {
   margin-top: 20px;
