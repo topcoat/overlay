@@ -69,8 +69,8 @@ Overlay
   border-radius: 6px;
   background-color: #e5e9e8;
   border: 1px solid #a5a8a8;
-  width: 500px;
-  margin-left: -250px;
+  width: 50%;
+  margin-left: -25%;
   text-align: center;
   z-index: 10;
 }
