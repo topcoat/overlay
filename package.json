@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Topcoat default overlay skin",
   "main": "index.html",
+  "style": "src/overlay.css",
   "directories": {
     "test": "test"
   },
@@ -21,21 +22,25 @@
     "adobe"
   ],
   "author": "@ndreio Andrei Oprea",
+  "contributors": [
+    "Kristofer Joseph (http://twitter.com/dam)",
+    "Garth Braithwaite (http://garthdb.com/)"
+  ],
   "license": "Apache2",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-stylus": "~0.5.0",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.0",
-    "grunt-contrib-jade": "~0.5.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-topdoc": "0.3.0",
+    "grunt-topcoat": "0.2.1",
+    "topdoc-theme": "0.5.0",
+    "topcoat-theme-mobile-dark": "0.2.3",
+    "topcoat-theme-mobile-light": "0.2.3",
+    "topcoat-theme-desktop-light": "0.2.4",
+    "topcoat-theme-desktop-dark": "0.2.3"
   },
   "dependencies": {
-    "topcoat-utils": "~0.1.0",
-    "topcoat-button": "~0.4.0",
-    "topcoat-overlay-base": "~0.0.1",
-    "topcoat-theme": "~0.4.0"
+    "topcoat-overlay-base": "0.0.2"
   }
 }

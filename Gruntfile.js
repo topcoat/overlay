@@ -20,25 +20,38 @@
 
 module.exports = function(grunt) {
 
-
-    // Project configuration.
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
 
         clean: {
             release: ['css'],
         },
 
-            stylus: {
-        compile: {
-                options: {
-                    paths: ['src/', 'node_modules/topcoat-utils/src/mixins', 'node_modules/topcoat-overlay-base/src/mixins', 'node_modules/topcoat-theme/src', 'node_modules/topcoat-theme/src/includes'],
-                    import: ['overlay-mixin', 'utils', 'theme-topcoat-mobile-light', 'copyright.styl', 'global', 'fonts'],
-                    compress: false
-                },
+        topcoat: {
+            options: {
+                browsers: ['last 2 versions'],
+                namespace: 'topcoat',
+                license: grunt.file.read('test/fixtures/license.txt')
+            },
+            compile: {
                 files: [{
-                    src: 'src/topcoat-overlay.styl',
-                    dest: 'css/topcoat-overlay.css'
-                }]
+                        expand: true,
+                        cwd: 'test/fixtures',
+                        src: ['*.css'],
+                        dest: 'css/',
+                        ext: '.css'
+                    }
+                ]
+            }
+        },
+
+        topdoc: {
+            usageguides: {
+                options: {
+                    source: 'css',
+                    destination: "demo",
+                    template: "node_modules/topdoc-theme/"
+                }
             }
         },
 
@@ -48,65 +61,28 @@ module.exports = function(grunt) {
                 cwd: 'css',
                 src: ['*.css', '!*.min.css'],
                 dest: 'css',
-                ext: '.min.css',
-                options: {
-                    banner: grunt.file.read('src/copyright.styl').toString()
-                }
+                ext: '.min.css'
             }
         },
-
-        copy: {
-            release: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: 'node_modules/topcoat-theme/font/**/*',
-                    dest: 'font'
-                }]
-            }
-        },
-
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
-        },
-
 
         simplemocha: {
-            options: {
-                ui: 'bdd',
-                reporter: 'Nyan'
-            },
             all: {
                 src: ['test/*.test.js']
             }
-        },
-
-        watch: {
-            files: 'src/**/*.styl',
-            tasks: ['build', 'test']
         }
 
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-topcoat');
+    grunt.loadNpmTasks('grunt-topdoc');
 
-    // Default task.
-    grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('default', ['clean', 'build', 'test','release']);
+    grunt.registerTask('build', ['topcoat']);
     grunt.registerTask('test', ['simplemocha']);
-    grunt.registerTask('release', ['cssmin', 'copy']);
+    grunt.registerTask('release', ['cssmin', 'topdoc']);
 
 };
