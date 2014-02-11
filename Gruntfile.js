@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             usageguides: {
                 options: {
                     source: 'css',
-                    destination: "demo",
+                    destination: "./",
                     template: "node_modules/topdoc-theme/"
                 }
             }
