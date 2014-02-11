@@ -17,30 +17,12 @@
 */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Regular.otf');
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Light.otf');
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url('../font/SourceSansPro-Semibold.otf');
-  font-weight: 600;
+  src: url("../font/SourceSansPro-Regular.otf");
 }
 
 body {
   font: 12px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: hsla(180, 5%, 88%, 1);
 }
 
 :focus {
@@ -80,13 +62,14 @@ body {
   description: A component that you can lay over things.
   modifiers:
   markup:
-    <div class="topcoat-overlay-bg"></div>
-    <aside class="topcoat-overlay">
-      <h1 class="topcoat-overlay__title">Are cats nice ?</h1>
-      <p>
-        Cat ipsum dolor sit amet, throwup on your pillow for chew foot. Nap all day by the shower for destroy couch so make muffins or stretch under the bed, or sweet beast. <a href="http://www.catipsum.com/index.php">Cat Ipsum</a>.
-      </p>
-    </aside>
+    <div class="topcoat-overlay-bg">
+      <aside class="topcoat-overlay">
+        <h1 class="topcoat-overlay__title">Header</h1>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </aside>
+    </div>
   examples:
     Codepen overlay: http://codepen.io/Topcoat/pen/AmnEu
   iframe: true
@@ -98,20 +81,14 @@ body {
 */
 
 .topcoat-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 20px 10px;
+  padding: 1.6rem;
   border-radius: 4px;
   background-color: hsla(165, 8%, 91%, 1);
   border: 1px solid hsla(168, 8%, 65%, 1);
-  width: 50%;
-  height: 25%;
-  margin: auto;
-  text-align: center;
-  z-index: 10;
+  min-width: 20%;
+  max-width: 50%;
+  min-height: 25%;
+  color: hsla(0, 0%, 27%, 1);
 }
 
 .topcoat-overlay-bg {
@@ -120,5 +97,34 @@ body {
   height: 100%;
   background-color: rgba(88, 90, 92, 0.7);
   box-shadow: inset 0px 0px 115px 0px #000000;
-  z-index: 5;
+  z-index: 20;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.topcoat-overlay__title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0rem 0 1rem;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid hsla(168, 8%, 65%, 1);
+  text-align: center;
 }
