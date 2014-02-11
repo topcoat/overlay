@@ -23,13 +23,14 @@
   description: A component that you can lay over things.
   modifiers:
   markup:
-    <div class="topcoat-overlay-bg"></div>
-    <aside class="topcoat-overlay">
-      <h1 class="topcoat-overlay__title">Are cats nice ?</h1>
-      <p>
-        Cat ipsum dolor sit amet, throwup on your pillow for chew foot. Nap all day by the shower for destroy couch so make muffins or stretch under the bed, or sweet beast. <a href="http://www.catipsum.com/index.php">Cat Ipsum</a>.
-      </p>
-    </aside>
+    <div class="topcoat-overlay-bg">
+      <aside class="topcoat-overlay">
+        <h1 class="topcoat-overlay__title">Header</h1>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </aside>
+    </div>
   examples:
     Codepen overlay: http://codepen.io/Topcoat/pen/AmnEu
   iframe: true
@@ -42,20 +43,14 @@
 
 .overlay {
   extend: %overlay;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: var(overlay-padding);
+  padding: var(padding--overlay);
   border-radius: var(border-radius);
   background-color: var(modal-bg-color);
   border: var(border);
-  width: var(overlay-width);
-  height: 25%;
-  margin: auto;
-  text-align: center;
-  z-index: 10;
+  min-width: 20%;
+  max-width: 50%;
+  min-height: 25%;
+  color: var(color);
 }
 
 .overlay-bg {
@@ -64,5 +59,20 @@
   height: 100%;
   background-color: var(overlay-bg-color);
   box-shadow: var(overlay-bg-box-shadow);
-  z-index: 5;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay__title {
+  font-weight: var(font-weight);
+  font-size: var(font-size--header);
+  margin: 0;
+  padding: var(padding--overlay__title);
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: var(border);
+  text-align: center;
 }
