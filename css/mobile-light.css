@@ -21,7 +21,7 @@
 }
 
 body {
-  font: 12px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font: 16px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }
 
@@ -83,7 +83,7 @@ body {
 .topcoat-overlay {
   padding: 1rem;
   /*var(padding--overlay)*/
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: hsla(165, 8%, 91%, 1);
   border: 1px solid hsla(168, 8%, 65%, 1);
   min-width: 20%;

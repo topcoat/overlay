@@ -48,7 +48,7 @@
   background-color: var(modal-bg-color);
   border: var(border);
   min-width: 20%;
-  max-width: 50%;
+  max-width: var(max-width--overlay);
   min-height: 25%;
   color: var(color);
 }

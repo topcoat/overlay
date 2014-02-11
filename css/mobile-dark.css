@@ -21,7 +21,7 @@
 }
 
 body {
-  font: 12px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font: 16px "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }
 
@@ -83,13 +83,13 @@ body {
 .topcoat-overlay {
   padding: 1rem;
   /*var(padding--overlay)*/
-  border-radius: 4px;
-  background-color: hsla(165, 8%, 91%, 1);
-  border: 1px solid hsla(168, 8%, 65%, 1);
+  border-radius: 6px;
+  background-color: hsla(180, 1%, 35%, 1);
+  border: 1px solid hsla(180, 1%, 20%, 1);
   min-width: 20%;
   max-width: 80%;
   min-height: 25%;
-  color: hsla(0, 0%, 27%, 1);
+  color: hsla(180, 2%, 78%, 1);
 }
 
 .topcoat-overlay-bg {
@@ -128,6 +128,6 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  border-bottom: 1px solid hsla(168, 8%, 65%, 1);
+  border-bottom: 1px solid hsla(180, 1%, 20%, 1);
   text-align: center;
 }

@@ -81,12 +81,13 @@ body {
 */
 
 .topcoat-overlay {
-  padding: 1.6rem;
+  padding: 1rem;
+  /*var(padding--overlay)*/
   border-radius: 4px;
   background-color: hsla(180, 1%, 35%, 1);
   border: 1px solid hsla(180, 1%, 20%, 1);
   min-width: 20%;
-  max-width: 50%;
+  max-width: 80%;
   min-height: 25%;
   color: hsla(180, 2%, 78%, 1);
 }
@@ -119,9 +120,11 @@ body {
 
 .topcoat-overlay__title {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  /*var(font-size--header)*/
   margin: 0;
-  padding: 0rem 0 1rem;
+  padding: 0 0 1.2rem;
+  /*var(padding--overlay__title)*/
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
